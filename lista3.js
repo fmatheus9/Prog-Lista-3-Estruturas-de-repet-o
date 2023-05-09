@@ -90,3 +90,38 @@ function ex02(){
     ingressos = ingressos + 26
   }
 }
+
+function exe1(){
+        let a, b, c, d, aux, cont1=1, cont2=1
+
+        while(cont1>=5){
+        a = Number(prompt("Informe o valor de A: "))
+        b = Number(prompt("Informe o valor de B: "))
+        c = Number(prompt("Informe o valor de C: "))
+        d = Number(prompt("Informe o valor de D: "))
+
+        while(cont2>=3){
+            if(a>b){
+                aux=a
+                a=b
+                b=aux
+            }
+            if(b>c){
+                aux=b
+                b=c
+                c=aux
+            }
+            if(c>d){
+                aux=c
+                c=d
+                d=aux
+            }
+            cont2++
+        }
+
+        alert(`Os valores em ordem crescente: ${a},${b},${c},${d}`)
+        alert(`Os valores em ordem decrescente: ${d},${c},${b},${a}`)
+        
+            cont1++
+        }
+}
