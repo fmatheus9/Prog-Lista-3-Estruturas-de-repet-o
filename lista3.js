@@ -225,3 +225,46 @@ function ex21(){
   alert(`Porcentagem de votos nulos sobre o total de votos: ${(cont5*100/cont7).toFixed(2)}%`)
   alert(`Porcentagem de votos brancos sobre o total de votos: ${(cont6*100/cont7).toFixed(2)}%`)
 }
+
+function ex23(){
+  let opcao
+  do{
+    opcao = Number(prompt("Menu de opções: \n1-Novo salário.\n2-Férias.\n3-Décimo terceiro.\n4-Sair."))
+    switch(opcao){
+      case 1:
+        let salario = Number(prompt("Informe o salário atual: "))
+        let nsalario
+        if(salario<210){
+          nsalario = salario/100*15
+          alert(`Novo salário com o aumento de 15% = ${nsalario+salario}`)
+        }
+        else if(salario >= 210 && salario < 600){
+          nsalario = (salario / 100) * 10
+          alert(`Novo salário com o aumento de 10% = ${nsalario+salario}`)
+        }
+        else{
+          nsalario = (salario / 100) * 5
+          alert(`Novo salário com o aumento de 5% = ${nsalario+salario}`)
+        };break
+      
+      case 2: 
+        let salariof = Number(prompt("Informe o salario: "))
+        let salariofe
+        salariofe = salariof+ (1/3*salariof)
+        alert(`Salário durante as férias: R$${(salariofe).toFixed(2)}`);break
+
+      case 3: 
+      let sala = Number(prompt("Informe o salário: "))
+      let mes = Number(prompt("Informe o número de meses trabalhados no ano: "))
+      let decter = sala*mes/12
+      alert("Décimo terceiro: R$"+(decter).toFixed(2));break
+
+      case 4:
+        alert("Programa finalizado.");break
+
+      default:
+        alert("Valor inválido.")
+    }
+  }
+  while(opcao!=4)
+}
